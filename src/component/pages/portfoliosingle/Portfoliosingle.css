@@ -1,0 +1,32 @@
+.hero_inner{
+      margin-top: -100px;
+}
+.hero_left{
+      box-shadow: 0px 14px 36px 0px #CCCCCC40;
+      border-radius: 20px 0 0 20px;
+}
+.hero_right{
+      background-color: #FAFAFA;
+      border-radius: 0 20px 20px 0;
+}
+.portfoliosingle_hero_img{
+      height: 800px;
+}
+@media (max-width:991px){
+      .portfoliosingle_hero_img{
+            width: 100%;
+      }
+}
+@media (max-width:767px){
+      .hero_left{
+            border-radius: 20px;
+      }
+      .hero_right{
+            border-radius: 20px;
+      }
+}
+@media (max-width:576px){
+      .hero_inner{
+            margin-top: 20px;
+      }
+}

@@ -1,0 +1,29 @@
+.team_hero{
+      background-image: url("../../images/ourteam.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+}
+.team_p{
+      width: 720px;
+}
+.team_data{
+      background-color: #F9F8F8;
+}
+.team_img img{
+      width: 100%;
+}
+
+@media (max-width:991px){
+      .team_p{
+            width: 100%;
+      }
+}
+@media (max-width:440px){
+      .team_data{
+            margin: 0 !important;
+      }
+}

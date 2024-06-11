@@ -1,0 +1,27 @@
+.error_hero {
+  background-image: url("../../images/error.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+.main_error{
+      font-size: 200px;
+      font-weight: 900;
+      color: #8FA8A8;
+}
+@media (max-width:767px){
+      .error_hero{
+            background-position: right;
+      }
+}
+@media (max-width:576px){
+      .error_hero{
+            height: 500px;
+      }
+      .main_error{
+            font-size: 150px;
+      }
+}

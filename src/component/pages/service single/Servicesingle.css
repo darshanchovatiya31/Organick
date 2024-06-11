@@ -1,0 +1,17 @@
+.servicesingle_hero{
+      background-image: url("../../images/servicesingle.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 370px ;
+      display: flex;
+      align-items: center;
+}
+.organic img{
+      width: 100%;
+}
+.organic_icon{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+}

@@ -1,0 +1,42 @@
+.service_hero{
+      background-image: url("../../images/Service1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 360px;
+      display: flex;
+      align-items: center;
+}
+.grow_inner img{
+      width: 100%;
+}
+.main_fresh{
+      background-image: url("../../images/fresh.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 800px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+}
+.fresh_icon{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+}
+
+@media (max-width:991px){
+      .main_fresh{
+            height: 500px;
+      }
+}
+@media (max-width:567px){
+      .main_fresh{
+            height: 400px;
+      }
+}
