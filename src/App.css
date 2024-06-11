@@ -217,6 +217,9 @@ li:hover .main_link{
   .header_serach input {
     width: 100px;
   }
+  .shopitem_left{
+    height: 290px;
+  }
 }
 @media (max-width: 1199px) {
   .subscribe input {

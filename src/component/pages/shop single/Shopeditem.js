@@ -64,36 +64,37 @@ const Shopeditem = () => {
         <div className="container">
           <div className="shopitem">
             {cartOldValue.map((item, index) => (
-              <div className="row my-5 justify-content-between align-items-center" key={index}>
-                <div className="col-md-4 col-12 ">
+              <div className="row my-4 my-lg-5 justify-content-between align-items-center" key={index}>
+                <div className="col-lg-4 col-md-6 col-12 ">
                   <div className="shopitem_left position-relative bg_dark_white">
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="" className="w-100 h-100" />
                     <div className="main_bg_blue health_head rounded mb-2 position-absolute">
                       <p className="text-white mb-0 py-1 px-2">{item.title}</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4 col-12 mt-4 mt-md-0">
+                <div className="col-lg-4 col-md-6 col-12 mt-2 mt-md-0">
                   <h3 className="main_blue fw-medium">{item.name}</h3>
                   <img src={star} alt="" />
                   <p className="mb-0 main_blue fw-bold"> <span>{item.oldprice}</span>{item.newprice}</p>
-                  <p className="my-sm-4 my-3">
+                  <p className="my-md-4 my-2">
                     Simply dummy text of the printing and typesetting industry.
                     Lorem had ceased to been the industry's standard dummy text
                     ever since the 1500s, when an unknown printer took a galley.
                   </p>
                 </div>
-                <div className="col-lg-4 col-12 mt-4 mt-md-0">
-                  <div className="d-flex gap-3 mb-4 align-items-center fs-3">
+                <div className="col-lg-4 col-12 d-flex flex-column align-items-center align-items-lg-start">
+                  <div className="d-flex gap-3 mt-2 mt-lg-0 mb-3 align-items-center fs-3">
                     <button className="px-3 rounded"
                       onClick={() => handleQuantityChange(index, -1)}>-</button>
                     <div>{quantities[index]}</div>
                     <button className="px-3 rounded"
                       onClick={() => handleQuantityChange(index, 1)}>+</button>
                   </div>
-                  <button className="py-3 mt-4 px-5 fs-4 rounded bg-danger text-white"
+                  <button className="py-3 mt-lg-4 px-5 fs-4 rounded bg-danger text-white"
                     onClick={() => handleRemoveItem(index)}>Remove</button>
                 </div>
+                <hr className="mt-4"/>
               </div>
             ))}
           </div>
