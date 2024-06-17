@@ -210,7 +210,21 @@ li:hover .main_link{
   text-decoration: line-through;
   color: #B8B8B8;
 }
-
+.main_loader{
+  height: 100vh;
+}
+.main_loader p{
+  border: 7px solid black;
+  width: 70px;
+  height: 70px;
+  border-bottom:7px solid #7eb693;
+  border-radius: 50%;
+  animation: loaderround .8s linear infinite;
+}
+@keyframes loaderround {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
 
 
 @media (max-width: 1199px) {
@@ -220,8 +234,6 @@ li:hover .main_link{
   .shopitem_left{
     height: 290px;
   }
-}
-@media (max-width: 1199px) {
   .subscribe input {
     width: 250px;
   }
