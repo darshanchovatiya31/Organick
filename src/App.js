@@ -35,11 +35,10 @@ function App() {
     setCart(parseInt(a === null ? 0 : a));
   }, [cart]);
 
-  {
     setTimeout(() => {
       setSpinner(true);
     }, 1000);
-  }
+  
   return (
     <>
       {Spinner && (
