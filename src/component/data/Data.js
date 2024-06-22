@@ -54,7 +54,7 @@ import Portfolio6 from "../images/portfolio6.png";
 export const navbar=[
       {
             name:"Home",
-            url:"/"
+            url:"/home"
       },
       {
             name:"About",

@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 import About from "./component/pages/about/About";
@@ -35,10 +35,10 @@ function App() {
     setCart(parseInt(a === null ? 0 : a));
   }, [cart]);
 
-    setTimeout(() => {
-      setSpinner(true);
-    }, 1000);
-  
+  setTimeout(() => {
+    setSpinner(true);
+  }, 1000);
+
   return (
     <>
       {Spinner && (
@@ -52,6 +52,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/shopsingle" element={<Shopsingle />} />
@@ -73,7 +74,11 @@ function App() {
           </BrowserRouter>
         </CratContext.Provider>
       )}
-      {!Spinner &&<div className="main_loader d-flex justify-content-center align-items-center"><p></p></div>}
+      {!Spinner && (
+        <div className="main_loader d-flex justify-content-center align-items-center">
+          <p></p>
+        </div>
+      )}
     </>
   );
 }
