@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="col location_inner_left">
                 <img src={location} alt="" className="w-100" />
               </div>
-              <div className="col-3 location_inner position-absolute bg-white rounded-4 p-3">
+              <div className="col-3 location_inner position-absolute bg-white rounded-4 p-3 p-sm-5">
                 <div>
                   <h3 className="main_green yellowtail">Location</h3>
                   <h2 className="main_blue roboto fw-bold">Our Farms</h2>

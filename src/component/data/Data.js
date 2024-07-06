@@ -64,10 +64,6 @@ export const navbar=[
             name:"Pages",
             icon:<IoIosArrowDown/>,
             submenu:[
-                  // {
-                  //       subname:"Shop Single",
-                  //       url:"/shopsingle"
-                  // },
                   {
                         subname:"Service",
                         url:"/service"
@@ -76,10 +72,6 @@ export const navbar=[
                         subname:"Service Single",
                         url:"/servicesingle"
                   },
-                  // {
-                  //       subname:"Portfolio Single",
-                  //       url:"/portfoliosingle"
-                  // },
                   {
                         subname:"Team",
                         url:"/team"
@@ -88,27 +80,6 @@ export const navbar=[
                         subname:"Blog",
                         url:"/blog"
                   },
-                  {
-                        subname:"Blog Single",
-                        url:"/blogsingle"
-                  },
-                  // {
-                  //       subname:"Error",
-                  //       url:"/error"
-                  // },
-                  // {
-                  //       subname:"Licenses",
-                  //       url:"/licenses"
-                  // },
-                  // {
-                  //       subname:"Changelog",
-                  //       url:"/changelog"
-                  // },
-                  // {
-                  //       subname:"Protected",
-                  //       url:"/protected"
-                  // },
-                  
             ]
       },
       {

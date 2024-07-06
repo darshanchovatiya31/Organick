@@ -19,7 +19,7 @@
 
 .location_inner {
   top: 50%;
-  width: 280px;
+  width: 400px;
   right: 15%;
   -ms-transform: translatey(-50%);
   transform: translatey(-50%);
@@ -39,6 +39,20 @@
 }
 @media (max-width: 767px) {
   .location_inner {
-    right: 3%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transform: translatey(-0%);
+  }
+}
+@media (max-width: 767px) {
+  .location_inner {
+    padding: 30px !important;
+  }
+}
+@media (max-width: 450px) {
+  .location_inner {
+    width: 280px;
+    padding: 20px 10px !important;
   }
 }
