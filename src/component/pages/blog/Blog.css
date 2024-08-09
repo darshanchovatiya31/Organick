@@ -12,6 +12,7 @@
 }
 .weekly_img img{
       width: 100%;
+      border-radius: 30px;
 }
 .weekly_data{
       width: 500px;
