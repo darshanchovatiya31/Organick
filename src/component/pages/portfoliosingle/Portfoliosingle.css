@@ -24,9 +24,20 @@
       .hero_right{
             border-radius: 20px;
       }
+      .portfoliosingle_hero_img {
+            height: 650px;
+        }
 }
 @media (max-width:576px){
       .hero_inner{
             margin-top: 20px;
       }
+      .portfoliosingle_hero_img {
+            height: 550px;
+        }
+}
+@media (max-width:450px){
+      .portfoliosingle_hero_img {
+            height: 450px;
+        }
 }

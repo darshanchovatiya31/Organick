@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../images/Logo.png";
 import { navbar } from "../data/Data";
 import { CiSearch } from "react-icons/ci";
@@ -18,21 +18,13 @@ const Header = () => {
     navigate("/shopeditem");
   };
 
-  const url = window.location.pathname.split("/").pop();
-  useEffect(() => {
-    var a = document.getElementById("navbarSupportedContent");
-    a.classList.remove("show");
-  }, [url]);
-
-  return (
-    <>
-      <header>
-        <nav className="navbar navbar-expand-lg py-4 header_main">
-          <div className="container">
-            <Link className="navbar-brand" to="/">
-              <img src={logo} alt="web logo" />
-            </Link>
-            <button
+  // const url = window.location.pathname.split("/").pop();
+  // useEffect(() => {
+  //   var a = document.getElementById("navbarSupportedContent");
+  //   a.classList.remove("show");
+  // }, [url]);
+  
+/* <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -42,12 +34,28 @@ const Header = () => {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            </button> */
+
+  return (
+    <>
+      <header>
+        <nav className="navbar navbar-expand-lg py-4 header_main">
+          <div className="container">
+            <Link className="navbar-brand" to="/">
+              <img src={logo} alt="web logo" />
+            </Link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><Link className="navbar-brand" to="/">
+              <img src={logo} alt="web logo" />
+            </Link></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                 {navbar.map((items) => (
                   <li className="nav-item position-relative head_nav mx-2 mx-lg-0 mx-xl-2">
                     <Link
@@ -55,8 +63,10 @@ const Header = () => {
                       aria-current="page"
                       to={items.url}
                     >
+                      <span data-bs-dismiss="offcanvas" aria-label="Close">
                       {items.name}
                       {items.icon}
+                      </span>
                     </Link>
                     <ul className="head_submenu p-0 text-center fw-semibold">
                       {items?.submenu?.map((item) => (
@@ -65,7 +75,9 @@ const Header = () => {
                             to={item.url}
                             className="text-decoration-none text-white head_sublink"
                           >
+                            <span data-bs-dismiss="offcanvas" aria-label="Close">
                             {item.subname}
+                            </span>
                           </Link>
                         </li>
                       ))}
@@ -73,7 +85,7 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-                <div className="hello">
+                {/* <div className="hello">
                   <div className="header_serach p-1 justify-content-between mx-1 mb-2 mb-lg-0">
                     <input
                       type="text"
@@ -88,7 +100,7 @@ const Header = () => {
                       <CiSearch className="fs-5 text-white fw-bold" />
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div
                   className="header_serach border p-1 d-flex align-items-center mx-1"
                   onClick={shopeditem}
@@ -102,9 +114,11 @@ const Header = () => {
                 </div>
             </div>
           </div>
+          </div>
         </nav>
       </header>
     </>
   );
 };
 export default Header;
+
